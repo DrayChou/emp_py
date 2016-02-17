@@ -1,0 +1,20 @@
+[mail]
+popserver = pop-mail.outlook.com
+popport = 995
+popstype = ssl
+smtpserver = smtp-mail.outlook.com
+smtpport = 587
+smtpstype = tls
+user =
+passwd =
+
+[settings]
+startsend = 0
+sleep = 10
+whitelist =
+
+[commands]
+tag_shutdown = #shutdown
+tag_screen = #screen
+tag_say = #say
+tag_cmd = #cmd
