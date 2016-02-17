@@ -3,7 +3,7 @@
 # @Author: zhouw
 # @Date:   2016-02-17 11:41:11
 # @Last Modified by:   zhouw
-# @Last Modified time: 2016-02-17 17:41:07
+# @Last Modified time: 2016-02-17 18:16:25
 
 import os
 import sys
@@ -246,9 +246,9 @@ def main():
                 msg_content = b'\r\n'.join(lines)
                 msg = Parser().parsestr(msg_content)
                 info = get_info(msg)
-                subject = info[0]
-                addr = info[1]
-                content = info[2]
+                subject = info[0].strip()
+                addr = info[1].strip()
+                content = info[2].strip()
                 datetime = info[3]
 
                 print datetime,time.asctime(time.localtime(datetime)),addr,subject
@@ -258,14 +258,15 @@ def main():
                     print 'continue',time.asctime(time.localtime(datetime)),time.asctime(time.localtime(last_mail_time))
                     continue
 
-                if addr in whitelist:
+                mail_list = whitelist.split('\n')
+                if addr in mail_list:
                     title = None
                     msg = None
                     pic_name = None
 
                     # 初始化命令列表
                     parm = ""
-                    tmp = subject.strip().split(" ", 1)
+                    tmp = subject.split(" ", 1)
                     cmd = tmp[0].lower()
 
                     if len(tmp) == 2:
