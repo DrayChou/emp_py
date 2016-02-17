@@ -12,6 +12,10 @@
 
 ### #cmd
 调用 subprocess 组件，执行 参数 ，并返回回执。
+如:
+    开启默认浏览器，打开页面:    #cmd start http://twitter.com
+    通过默认文本编辑器打开文本:  #cmd notepad.exe test.txt
+    ...
 
 ### #shutdown
 调用 subprocess 组件，执行 关机 操作，目前仅支持 windows 系统
