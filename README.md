@@ -13,6 +13,7 @@
 ### #cmd
 调用 subprocess 组件，执行 参数 ，并返回回执。
 如:
+
     开启默认浏览器，打开页面:    #cmd start http://twitter.com
     通过默认文本编辑器打开文本:  #cmd notepad.exe test.txt
     ...
@@ -30,6 +31,7 @@ windows 下面可以直接双击 run_bat.vbe 执行，或者添加该文件的�
 修改配置文件中的 sleep 实现，单位秒。
 
 ## Environment
-OS:Windows
-Python edition:Python2.7
-Packages:pywin32/email
+
+    OS:Windows
+    Python edition:Python2.7
+    Packages:pywin32/email
